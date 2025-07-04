@@ -18,7 +18,9 @@ const sjfAging = require("../algorithms/sjf_aging"); // Ensure implemented
 const app = express();
 const PORT = process.env.PORT||18080;
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:3000",
+}));
 app.use(bodyParser.json());
 
 // Test endpoint
