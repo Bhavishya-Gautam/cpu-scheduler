@@ -19,6 +19,9 @@ const sjfAging = require("../algorithms/sjf_aging");
 
 // Import Mongoose model
 const Session = require("../models/session");
+console.log("✅ Session Type:", typeof Session);
+console.log("✅ Session Keys:", Object.keys(Session));
+
 
 const app = express();
 const PORT = process.env.PORT || 18080;
