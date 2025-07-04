@@ -1,6 +1,10 @@
 const express = require("express");
 const cors = require("cors");
+const dotenv=require("dotenv");
 const bodyParser = require("body-parser");
+dotenv.config({
+    path:"./.env"
+})
 
 const fcfs = require("../algorithms/fcfs");
 const sjf = require("../algorithms/sjf"); // Ensure implemented
@@ -12,7 +16,7 @@ const mlqAging = require("../algorithms/mlq_aging"); // Ensure implemented
 const sjfAging = require("../algorithms/sjf_aging"); // Ensure implemented
 
 const app = express();
-const PORT = 18080;
+const PORT = process.env.PORT||18080;
 
 app.use(cors());
 app.use(bodyParser.json());
