@@ -43,5 +43,4 @@ This project helps understand how different scheduling strategies work by simula
 - Process State Transitions
 
 
-## 📁 Project Structure
 
